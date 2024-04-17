@@ -5,6 +5,7 @@ import com.example.employeedemo.exception.EmployeeNotFoundException;
 import com.example.employeedemo.mapper.EmployeeMapper;
 import com.example.employeedemo.model.Employee;
 import com.example.employeedemo.repository.EmployeeRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -14,6 +15,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class EmployeeService {
 
     private final EmployeeRepository employeeRepository;
